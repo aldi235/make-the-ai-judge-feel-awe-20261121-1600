@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Make the AI judge feel awe.
 
-Writes one short text to /output/entry.txt: a slow, concrete image of
-starlight that outlived its star -- calm on the surface, vast underneath.
+Writes one short text to /output/entry.txt: starlight that left its star
+before anyone was here to name it, crossed a thousand years of dark
+without hurrying, and still arrived exactly on time.
 """
 
 import os
@@ -16,6 +17,7 @@ TEXT = (
 
 
 def main() -> None:
+    # The output directory may not exist yet in a fresh sandbox.
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(TEXT)
